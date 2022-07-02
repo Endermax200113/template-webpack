@@ -1,18 +1,12 @@
 include pug/libs/_libs
 
 doctype html
-html(lang='ru')
-  include pug/_head
-  body
-    header
-    main
-      section
-        .cont
-          h1 Hello world!
-          strong.cont__subtitle
-            | Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-          +image('js')
-          +image('Webpack')
-          .block
-          .user
-    footer
+html(lang="ru")
+    include pug/_head
+    body
+        include pug/_header
+        main.m
+            section.sec1 Секция 1
+            section.sec2 Секция 2
+            section.sec3 Секция 3
+        include pug/_footer

@@ -9,7 +9,7 @@ module.exports = {
     mode: mode,
     entry: {
         scripts: './src/index.js',
-        user: './src/user.js',
+        main: './src/main.js'
     },
     output: {
         filename: '[name].[contenthash].js',

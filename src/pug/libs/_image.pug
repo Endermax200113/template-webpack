@@ -1,2 +1,55 @@
-mixin image(name)
+mixin imgDefault(name)
     img(src=require(`../src/images/${name}.png`) alt=name)
+
+mixin imgExt(name, ext)
+    img(src=require(`../src/images/${name}.${ext}`) alt=name)
+
+mixin imgPathDefault(path, name)
+    img(src=require(`../src/images/${path}/${name}.png}`) alt=name)
+
+mixin imgPathExt(path, name, ext)
+    img(src=require(`../src/images/${path}/${name}.${ext}`) alt=name)
+
+mixin imgDefaultClass(name, clazz)
+    img(src=require(`../src/images/${name}.png`) alt=name class=clazz)
+
+mixin imgExtClass(name, ext, clazz)
+    img(src=require(`../src/images/${name}.${ext}`) alt=name class=clazz)
+
+mixin imgPathDefaultClass(path, name, clazz)
+    img(src=require(`../src/images/${path}/${name}.png}`) alt=name class=clazz)
+
+mixin imgPathExtClass(path, name, ext, clazz)
+    img(src=require(`../src/images/${path}/${name}.${ext}`) alt=name class=clazz)
+
+mixin svgDefault(name)
+    svg
+        use(xlink:href=require(`../src/images/${name}.svg`))
+
+mixin svgId(name, id)
+    svg
+        use(xlink:href=require(`../src/images/${name}.svg#${id}`))
+
+mixin svgPath(path, name)
+    svg
+        use(xlink:href=require(`../src/images/${path}/${name}.svg`))
+
+mixin svgPathId(path, name, id)
+    svg
+        use(xlink:href=require(`../src/images/${path}/${name}.svg#${id}`))
+
+mixin svgDefaultClass(name, clazz)
+    svg(class=clazz)
+        use(xlink:href=require(`../src/images/${name}.svg`))
+
+mixin svgIdClass(name, id, clazz)
+    svg(class=clazz)
+        use(xlink:href=require(`../src/images/${name}.svg#${id}`))
+
+mixin svgPathClass(path, name, clazz)
+    svg(class=clazz)
+        use(xlink:href=require(`../src/images/${path}/${name}.svg`))
+
+mixin svgPathIdClass(path, name, id, clazz)
+    svg(class=clazz)
+        use(xlink:href=require(`../src/images/${path}/${name}.svg#${id}`))
